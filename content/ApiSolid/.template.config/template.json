@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Gentil Pedro",
+  "classifications": [ "Web", "WebAPI", "SOLID", "C#" ],
+  "identity": "GentilPedro.Templates.ApiSolid",
+  "name": "Gentil Pedro - API SOLID (.NET 10)",
+  "shortName": "api-solid",
+  "sourceName": "SolidApiTemplate",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

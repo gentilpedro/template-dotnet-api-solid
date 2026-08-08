@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <PackageType>Template</PackageType>
+    <PackageId>GentilPedro.Templates.ApiSolid</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>Gentil Pedro - API SOLID Template (.NET 10)</Title>
+    <Authors>Gentil Pedro</Authors>
+    <Description>Template dotnet new de Web API .NET 10 em camadas enxutas (Controllers/Services/Repositories/Domain) aplicando os princípios SOLID, com AutoMapper, FluentValidation, JWT, EF Core + Npgsql, Serilog e Scalar já configurados.</Description>
+    <PackageTags>dotnet-new;templates;webapi;solid;net10</PackageTags>
+    <RepositoryUrl>https://github.com/gentilpedro/template-dotnet-api-solid</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/gentilpedro/template-dotnet-api-solid</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoWarn>NU5128</NoWarn>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="content\**\*" Exclude="content\**\bin\**;content\**\obj\**;content\**\node_modules\**;content\**\logs\**" />
+    <Compile Remove="**\*.cs" />
+  </ItemGroup>
+
+</Project>
