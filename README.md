@@ -11,23 +11,21 @@ Inclui, já configurados e funcionando ponta a ponta com uma entidade de exemplo
 - Serilog (console + arquivo)
 - Scalar (UI de OpenAPI, no lugar do Swagger UI)
 
-## Instalação
+## Como criar um projeto novo
 
-Este pacote é publicado no GitHub Packages (feed NuGet privado do autor) a cada push na branch `main`, via GitHub Actions.
-
-1. Configure a fonte NuGet uma única vez (precisa de um Personal Access Token seu com escopo `read:packages`):
+**1. Configure o GitHub Packages como fonte NuGet** (uma vez só, nesta máquina — precisa de um token seu com escopo `read:packages`):
 
 ```
 dotnet nuget add source https://nuget.pkg.github.com/gentilpedro/index.json -n github-gentilpedro -u gentilpedro -p <SEU_TOKEN> --store-password-in-clear-text
 ```
 
-2. Instale o template:
+**2. Instale o template:**
 
 ```
 dotnet new install GentilPedro.Templates.ApiSolid
 ```
 
-## Uso
+**3. Crie o projeto:**
 
 ```
 dotnet new api-solid -n MeuApp
@@ -35,12 +33,10 @@ dotnet new api-solid -n MeuApp
 
 Isso gera um projeto `MeuApp` com o namespace já ajustado, pronto para `dotnet build` / `dotnet run` (configure a connection string do Postgres e o segredo do JWT em `appsettings.json` ou `appsettings.Development.json` antes de rodar).
 
-## Atualizar para a versão mais recente
+### Atualizar para a versão mais nova
+
+Cada push na `main` deste repositório republica o pacote (versão `1.0.<run_number>`). Não precisa reinstalar manualmente:
 
 ```
 dotnet new update
 ```
-
-## Publicação / versionamento
-
-Cada push na `main` dispara `.github/workflows/publish.yml`, que empacota (`dotnet pack`) com versão `1.0.<run_number>` e publica no GitHub Packages. Não é necessário reinstalar manualmente — `dotnet new update` detecta a versão nova a partir da fonte configurada.
